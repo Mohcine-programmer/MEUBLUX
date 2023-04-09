@@ -43,7 +43,7 @@ app.use(cookieParser(process.env.JWT_SECRET))
 app.use(
     helmet.contentSecurityPolicy({
         directives: {
-            scriptSrc: ["'self'", 'unsafe-eval', 'data:', 'js.stripe.com', 'https://accounts.google.com'],
+            scriptSrc: ["'self'", 'data:', 'js.stripe.com', 'https://accounts.google.com'],
             imgSrc: ["'self'", 'data:', 'res.cloudinary.com'],
             frameSrc: ["'self'", "https://js.stripe.com"],
             connectSrc: ["'self'", 'data:', 'https://www.googleapis.com/']
