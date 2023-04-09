@@ -59,7 +59,8 @@ const Navbar = () => {
         }
     }, [showAccountMenu])
 
-
+    console.log(`${process.env.REACT_APP_OAUTH_CLIENT_ID}`);
+    console.log("778216112109-2g7hjnnj2grck6sh75k8l37g1s31s9q8.apps.googleusercontent.com");
     return (
         <GoogleOAuthProvider
             clientId={`${process.env.REACT_APP_OAUTH_CLIENT_ID}`}

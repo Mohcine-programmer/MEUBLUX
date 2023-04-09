@@ -42,7 +42,8 @@ const register = async (req, res) => {
     if (isFirstAccount) role = 'admin'
     const verificationToken = crypto.randomBytes(40).toString('hex')
     const user = await User.create({ name, email, password, role, verificationToken })
-    await sendEmail(email, name, verificationToken, email, req.headers.referer)
+    const origin = 'https://meublux.onrender.com/'
+    await sendEmail(email, name, verificationToken, email, origin)
     res.status(StatusCodes.CREATED).json({ msg: 'account successfully created. please verify your email' })
 }
 const updateUser = async (req, res) => {
