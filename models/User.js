@@ -23,7 +23,10 @@ const userSchema = mongoose.Schema({
         type: String,
         minlength: 6,
     },
-    city: String,
+    city: {
+        type: String,
+        default: 'Casablanca'
+    },
     image: {
         type: String,
     },

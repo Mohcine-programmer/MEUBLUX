@@ -1,6 +1,7 @@
 import React from 'react'
 import ApexCharts from 'react-apexcharts'
 const ChartComponent = ({ labelField, serieField, data }) => {
+
     const series = data.map((item) => {
         return item[serieField]
     })
